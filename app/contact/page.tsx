@@ -83,7 +83,7 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
                   <div className="w-12 h-12 rounded-xl bg-emerald-950 border border-emerald-800 flex items-center justify-center text-emerald-400 text-xl"><FaWhatsapp /></div>
                   <div>
-                    <h3 className="font-black text-white">الواتساب</h3>
+                    <h3 className="font-black text-white">{t.contactWhatsapp}</h3>
                     <p className="text-sm text-slate-400" dir="ltr">+20 101 288 4291</p>
                   </div>
                 </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
                   <div className="w-12 h-12 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 text-xl"><FaPhone /></div>
                   <div>
-                    <h3 className="font-black text-white">الهاتف</h3>
+                    <h3 className="font-black text-white">{t.contactPhone}</h3>
                     <p className="text-sm text-slate-400" dir="ltr">+20 101 288 4291</p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
                   <div className="w-12 h-12 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 text-xl"><FaEnvelope /></div>
                   <div>
-                    <h3 className="font-black text-white">البريد الإلكتروني</h3>
+                    <h3 className="font-black text-white">{t.contactEmail}</h3>
                     <p className="text-sm text-slate-400">info@elikhlas-academy.com</p>
                   </div>
                 </div>
@@ -110,8 +110,8 @@ export default function ContactPage() {
                 <div className="flex items-center space-x-4 rtl:space-x-reverse">
                   <div className="w-12 h-12 rounded-xl bg-amber-950 border border-amber-800 flex items-center justify-center text-amber-400 text-xl"><FaMapMarkerAlt /></div>
                   <div>
-                    <h3 className="font-black text-white">العنوان</h3>
-                    <p className="text-sm text-slate-400">أكاديمية الإ独有的 - تعليم أونلاين</p>
+                    <h3 className="font-black text-white">{t.contactAddress}</h3>
+                    <p className="text-sm text-slate-400">{t.contactAddressValue}</p>
                   </div>
                 </div>
               </div>
@@ -127,8 +127,8 @@ export default function ContactPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "تواصل معنا - أكاديمية الإخلاص",
-            description: "تواصل مع أكاديمية الإخلاص لتعلم القرآن الكريم. احجز حصتك التجريبية المجانية عبر الواتساب أو نموذج التواصل",
+            name: "Contact Us - El-Ikhlas Academy",
+            description: "Contact El-Ikhlas Academy for Quran education. Book your free trial class via WhatsApp or contact form.",
             mainEntity: {
               "@type": "Organization",
               name: "El-Ikhlas Academy",

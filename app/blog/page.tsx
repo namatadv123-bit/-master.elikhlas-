@@ -62,8 +62,8 @@ export default function BlogPage() {
       <section className="relative z-10 pt-20 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto space-y-6">
-            <h1 className="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">المدونة</h1>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto">مقالات ومقالات عن تعليم القرآن الكريم والتجويد والإجازة بالسند المتصل</p>
+            <h1 className="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">{t.navBlog}</h1>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">{t.blogSub}</p>
           </div>
         </div>
       </section>
@@ -81,7 +81,7 @@ export default function BlogPage() {
                   <h2 className="text-xl font-black text-white mb-3 group-hover:text-amber-400 transition-colors leading-relaxed">{post.title}</h2>
                   <p className="text-sm text-slate-400 leading-relaxed font-medium mb-6">{post.excerpt}</p>
                   <Link href={`/blog/${post.slug}`} className="inline-flex items-center space-x-2 rtl:space-x-reverse text-amber-400 font-black text-sm hover:text-amber-300 transition-colors">
-                    <span>اقرأ المزيد</span>
+                    <span>{t.blogReadMore}</span>
                     <FaArrowLeft className="text-xs" />
                   </Link>
                 </div>
@@ -98,8 +98,8 @@ export default function BlogPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Blog",
-            name: "مدونة أكاديمية الإخلاص",
-            description: "مقالات ومقالات عن تعليم القرآن الكريم والتجويد والإجازة بالسند المتصل",
+            name: "El-Ikhlas Academy Blog",
+            description: "Articles about Quran education, Tajweed, and Ijazah programs.",
             url: "https://elikhlas-academy.com/blog",
             publisher: {
               "@type": "Organization",

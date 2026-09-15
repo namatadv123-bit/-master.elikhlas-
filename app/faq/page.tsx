@@ -53,11 +53,11 @@ export default function FAQPage() {
 
       <section className="relative z-10 py-24 bg-slate-950/80 backdrop-blur-lg">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl sm:text-5xl font-black text-white">لم تجد إجابة لسؤالك؟</h2>
-          <p className="text-lg text-slate-300">تواصل معنا مباشرة عبر الواتساب وسنجيب على جميع استفساراتك</p>
-          <a href={getWhatsappLink("السلام عليكم، لدي استفسار عن أكاديمية الإ独有的")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center space-x-3 rtl:space-x-reverse px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-slate-950 font-black text-lg shadow-xl shadow-amber-950 border border-amber-300">
+          <h2 className="text-3xl sm:text-5xl font-black text-white">{t.faqCta}</h2>
+          <p className="text-lg text-slate-300">{t.faqCtaSub}</p>
+          <a href={getWhatsappLink("السلام عليكم، لدي استفسار عن أكاديمية الإخلاص")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center space-x-3 rtl:space-x-reverse px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-slate-950 font-black text-lg shadow-xl shadow-amber-950 border border-amber-300">
             <FaWhatsapp className="text-2xl" />
-            <span>تواصل معنا</span>
+            <span>{t.faqContact}</span>
           </a>
         </div>
       </section>
@@ -69,8 +69,8 @@ export default function FAQPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            name: "الأسئلة الشائعة - أكاديمية الإخلاص",
-            description: "إجابات على الأسئلة الشائعة حول تعليم القرآن الكريم والتجويد والإجازة بالسند المتصل في أكاديمية الإخلاص",
+            name: "FAQ - El-Ikhlas Academy",
+            description: "Answers to frequently asked questions about Quran education, Tajweed, and Ijazah programs at El-Ikhlas Academy.",
             mainEntity: faqs.map((faq) => ({
               "@type": "Question",
               name: faq.qAr,

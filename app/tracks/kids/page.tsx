@@ -16,10 +16,10 @@ export default function KidsTrackPage() {
   const { lang, t, isRtl } = useLang();
 
   const features = [
-    { title: "قاعدة نورانية تفاعلية", desc: "تعليم الحروف والأحرف بطريقة ممتعة وتفاعلية تناسب أعمار الأطفال." },
-    { title: "تصحيح التلاوة", desc: "corrective feedback فوري لتصحيح أخطاء النطق والتجويد مع كل طفل." },
-    { title: "بيئة تعليمية ممتعة", desc: "ألعاب وأنشطة تفاعلية تجعل الطفل يحب تعلم القرآن ويتطلع لكل حصة." },
-    { title: "متابعة الأبوين", desc: "تقارير دورية لأولياء الأمور عن تقدم الطفل وإتقانه للحفظ والتلاوة." },
+    { title: t.trackKidsFeature1Title, desc: t.trackKidsFeature1Desc },
+    { title: t.trackKidsFeature2Title, desc: t.trackKidsFeature2Desc },
+    { title: t.trackKidsFeature3Title, desc: t.trackKidsFeature3Desc },
+    { title: t.trackKidsFeature4Title, desc: t.trackKidsFeature4Desc },
   ];
 
   return (
@@ -33,10 +33,10 @@ export default function KidsTrackPage() {
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="inline-flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 text-xs font-extrabold">
               <FaChild className="text-emerald-400" />
-              <span>مسار خاص بالأطفال</span>
+              <span>{t.trackKidsBadge}</span>
             </div>
-            <h1 className="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">مسار براعم القرآن</h1>
-            <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">برنامج تعليمي متكامل مصمم خصيصاً للأطفال لتعليمهم القاعدة النورانية والقرآن الكريم بأسلوب تفاعلي وممتع يحبب الطفل فيه تعلم كتاب الله.</p>
+            <h1 className="text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">{t.trackKidsTitle}</h1>
+            <p className="text-lg text-slate-300 leading-relaxed max-w-3xl">{t.trackKidsDesc}</p>
           </div>
         </div>
       </section>
@@ -58,13 +58,13 @@ export default function KidsTrackPage() {
       <section className="relative z-10 py-16 bg-slate-900/40 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-            <h2 className="text-3xl sm:text-4xl font-black text-white">مميزات المسار</h2>
+            <h2 className="text-3xl sm:text-4xl font-black text-white">{t.trackKidsBenefits}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <FaClock />, title: "مرونة المواعيد", desc: "اختر الأوقات التي تناسب جدول الطفل المدرسي والأنشطة." },
-              { icon: <FaShieldAlt />, title: "سند معتمد", desc: "معلمات مجازات بالسند المتصل مع خبرة مع الأطفال." },
-              { icon: <FaStar />, title: "شهادات تفوق", desc: "شهادات مكافأة للطلاب المتميزين لتشجيعهم على الاستمرار." },
+              { icon: <FaClock />, title: t.trackKidsBenefit1Title, desc: t.trackKidsBenefit1Desc },
+              { icon: <FaShieldAlt />, title: t.trackKidsBenefit2Title, desc: t.trackKidsBenefit2Desc },
+              { icon: <FaStar />, title: t.trackKidsBenefit3Title, desc: t.trackKidsBenefit3Desc },
             ].map((item, idx) => (
               <div key={idx} className="p-8 rounded-3xl bg-slate-900/70 backdrop-blur-xl border border-slate-800 hover:border-amber-500/50 transition-all text-center">
                 <div className="w-16 h-16 rounded-2xl bg-amber-950/80 border border-amber-700/50 flex items-center justify-center text-amber-400 text-3xl mb-6 mx-auto">{item.icon}</div>
@@ -78,11 +78,11 @@ export default function KidsTrackPage() {
 
       <section className="relative z-10 py-24 bg-slate-950/80 backdrop-blur-lg">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl sm:text-5xl font-black text-white">سجّل طفلك الآن</h2>
-          <p className="text-lg text-slate-300">احجز حصص تجريبية مجانية لمعرفة مستوى طفلك واختيار البرنامج المناسب</p>
-          <a href={getWhatsappLink("السلام عليكم، أريد تسجيل طفلي في مسار براعم القرآن في أكاديمية الإ独有的")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center space-x-3 rtl:space-x-reverse px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-slate-950 font-black text-lg shadow-xl shadow-amber-950 border border-amber-300">
+          <h2 className="text-3xl sm:text-5xl font-black text-white">{t.trackKidsCta}</h2>
+          <p className="text-lg text-slate-300">{t.trackKidsCtaSub}</p>
+          <a href={getWhatsappLink("السلام عليكم، أريد تسجيل طفلي في مسار براعم القرآن في أكاديمية الإخلاص")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center space-x-3 rtl:space-x-reverse px-10 py-5 rounded-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-slate-950 font-black text-lg shadow-xl shadow-amber-950 border border-amber-300">
             <FaWhatsapp className="text-2xl" />
-            <span>احجز حصص تجريبية</span>
+            <span>{t.btnRegister}</span>
           </a>
         </div>
       </section>
@@ -94,8 +94,8 @@ export default function KidsTrackPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Course",
-            name: "مسار براعم القرآن - برنامج تعليم القرآن للأطفال",
-            description: "برنامج تعليمي متكامل مصمم خصيصاً للأطفال لتعليمهم القاعدة النورانية والقرآن الكريم بأسلوب تفاعلي وممتع",
+            name: "Kids Quran Program - Online Quran Classes for Children",
+            description: "Interactive online Quran program for children. Learn Noorani Qaida, basic Tajweed rules, and memorize short surahs.",
             provider: {
               "@type": "Organization",
               name: "El-Ikhlas Academy",
@@ -103,11 +103,11 @@ export default function KidsTrackPage() {
             },
             educationalLevel: "Beginner",
             inLanguage: "ar",
-            coursePrerequisites: "لا يوجد متطلبات مسبقة",
+            coursePrerequisites: "No prerequisites",
             hasCourseInstance: {
               "@type": "CourseInstance",
               courseMode: "online",
-              courseWorkload: "3-5 ساعات أسبوعياً"
+              courseWorkload: "3-5 hours per week"
             },
             about: ["Quran memorization for children", "Noorani Qaida", "Tajweed basics", "Online Quran classes for kids"]
           })
