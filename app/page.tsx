@@ -99,7 +99,7 @@ export default function Home() {
                     fetchPriority="high"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#070b12] via-[#070b12]/40 to-transparent flex flex-col justify-end p-8 text-white">
-                    <span className="px-3 py-1 rounded-full bg-amber-500 text-slate-950 font-black text-xs w-fit mb-2">﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾</span>
+                    <span dir="rtl" className="px-3 py-1 rounded-full bg-amber-500 text-slate-950 font-black text-xs w-fit mb-2">﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾</span>
                     <h3 className="text-2xl font-black text-amber-100">{isRtl ? "طريقك لحفظ وإتقان المصحف الشريف" : "Your Path to Quran Mastery"}</h3>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all" />
                 <div>
                   <FaQuoteRight className="text-3xl text-amber-500/40 mb-6" />
-                  <p className="text-xl sm:text-2xl font-bold text-amber-200 font-serif leading-relaxed mb-4">﴿ {item.ayah} ﴾</p>
+                  <p dir="rtl" className="text-xl sm:text-2xl font-bold text-amber-200 font-serif leading-relaxed mb-4">﴿ {item.ayah} ﴾</p>
                   <p className="text-xs text-slate-400 italic mb-4 font-sans leading-normal">"{isRtl ? item.translationEn : item.translationEn}"</p>
                 </div>
                 <div className="pt-4 border-t border-slate-800 text-xs font-black text-amber-400">{isRtl ? item.surahAr : item.surahEn}</div>
