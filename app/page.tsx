@@ -135,9 +135,9 @@ export default function Home() {
                 <div>
                   <FaQuoteRight className="text-3xl text-amber-500/40 mb-6" />
                   <p className="text-xl sm:text-2xl font-bold text-amber-200 font-serif leading-relaxed mb-4">﴿ {item.ayah} ﴾</p>
-                  <p className="text-xs text-slate-400 italic mb-4 font-sans leading-normal">"{item.translationEn}"</p>
+                  <p className="text-xs text-slate-400 italic mb-4 font-sans leading-normal">"{isRtl ? item.translationEn : item.translationEn}"</p>
                 </div>
-                <div className="pt-4 border-t border-slate-800 text-xs font-black text-amber-400">{item.surahAr}</div>
+                <div className="pt-4 border-t border-slate-800 text-xs font-black text-amber-400">{isRtl ? item.surahAr : item.surahEn}</div>
               </div>
             ))}
           </div>
